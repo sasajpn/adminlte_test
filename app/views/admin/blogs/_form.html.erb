@@ -1,0 +1,12 @@
+<div class="box box-primary">
+  <div class="box-body">
+    <div class="form-group">
+      <%= bootstrap_form_for [:admin, @blog] do |f| %>
+        <%= f.alert_message "エラーがあります。" %>
+        <%= f.text_field :title %>
+        <%= f.text_area :content %>
+        <%= f.primary %>
+      <% end %>
+    </div>
+  </div>
+</div>

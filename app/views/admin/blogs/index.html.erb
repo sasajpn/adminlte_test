@@ -1,0 +1,25 @@
+<section class="content-header">
+  <h1>Blog一覧</h1>
+</section>
+<%= link_to 'Blog作成', new_admin_blog_path, class: "btn bg-navy margin" %>
+<% if @blogs.any? %>
+  <div class="box box-primary">
+    <div class="box-body">
+      <ul class="products-list product-list-in-box">
+        <% @blogs.each do |blog| %>
+        <li class="item">
+          <div class="product-info">
+            <%= link_to admin_blog_path(blog), class: "product-title" do %><%= blog.title %><% end %>
+            <span class="label label-warning pull-right">作成日：<%= blog.created_at.strftime('%Y年%m月%d日') %></span>
+            <span class="product-description">
+              <%= truncate(blog.content, length: 100) %>
+            </span>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% else %>
+  <h4 class="label label-info">Blogが存在しません。</h4>
+<% end %>

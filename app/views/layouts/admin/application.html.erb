@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <%= stylesheet_link_tag    "admin/application", media: "all" %>
+  <%= javascript_include_tag "admin/application" %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <%= render partial: 'admin/shared/header' %>
+    <%= render partial: 'admin/shared/sidebar' %>
+    <div class="content-wrapper">
+      <%= yield %>
+    </div>
+    <%= render partial: 'admin/shared/footer' %>
+  </div>
+</body>
+</html>

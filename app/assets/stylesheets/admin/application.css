@@ -1,0 +1,8 @@
+/*
+*= require_tree .
+*= require admin/vendor/AdminLTE.min
+*= require admin/vendor/bootstrap
+*= require admin/vendor/skins/_all-skins
+*= require admin/vendor/plugins/blue
+*= require_self
+*/
