@@ -5,7 +5,7 @@
   	<article class="blogpost">
   		<div class="row grid-space-10">
   			<div class="col-md-6">
-          <%= image_tag('blog.jpg', alt: "The Project") %>
+          <%= image_tag('blog.jpg') %>
   			</div>
   			<div class="col-md-6">
   				<header>
@@ -26,4 +26,6 @@
   		<footer class="clearfix"></footer>
   	</article>
   <% end %>
+  <%= paginate @blogs, theme: "user"  %>
+
 </div>

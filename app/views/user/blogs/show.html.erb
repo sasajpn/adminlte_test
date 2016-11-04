@@ -15,9 +15,9 @@
 		</div>
 		<footer class="clearfix">
 			<div class="link pull-right">
-				<ul class="social-links circle small colored clearfix margin-clear text-right animated-effect-1">
-					<li class="twitter"><%= link_to edit_user_blog_path(@blog) do %><i class="fa fa-edit"></i><% end %></li>
-					<li class="googleplus"><%= link_to user_blog_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } do %><i class="fa fa-trash-o"></i><% end %></li>
+				<ul class="blog-option small margin-clear text-right">
+					<li><%= link_to edit_user_blog_path(@blog) do %><i class="fa fa-edit"></i><% end %></li>
+					<li><%= link_to user_blog_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } do %><i class="fa fa-trash-o"></i><% end %></li>
 				</ul>
 			</div>
 		</footer>

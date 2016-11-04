@@ -6,27 +6,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Database/Model
 gem 'mysql2', '~> 0.3.21'
-gem 'paranoia'
-#gem 'active_hash'
-#gem 'enum_help'
 
 # Views/Presentation
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-
-#gem 'slim-rails'
-#gem 'html2slim'
 
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap_form'
-gem 'font-awesome-rails'
-
-# Authenticate
-gem 'devise'
 
 # Pagination
 gem 'kaminari'
@@ -66,10 +55,3 @@ group :development do
   gem 'rubocop', require: false
   gem 'letter_opener'
 end
-
-#group :test do
-#  gem 'rspec'
-#  gem 'rspec-rails'
-#  gem 'database_cleaner'
-#  gem 'shoulda-matchers', require: false
-#end
