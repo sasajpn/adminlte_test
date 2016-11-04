@@ -4,4 +4,8 @@ Rails.application.routes.draw do
     get :dashboard
     resources :blogs
   end
+
+  namespace :user do
+    resources :blogs
+  end
 end

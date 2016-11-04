@@ -1,0 +1,29 @@
+<div class="main col-md-8 col-lg-offset-1 col-md-push-4 col-lg-push-3">
+  <h1 class="page-title">Blog一覧</h1>
+  <div class="separator-2"></div>
+  <% @blogs.each do |blog| %>
+  	<article class="blogpost">
+  		<div class="row grid-space-10">
+  			<div class="col-md-6">
+          <%= image_tag('blog.jpg', alt: "The Project") %>
+  			</div>
+  			<div class="col-md-6">
+  				<header>
+  					<h2><%= link_to user_blog_path(blog) do %><%= blog.title %><% end %></h2>
+  					<div class="post-info">
+  						<span class="post-date">
+  							<i class="icon-calendar"></i>
+  							<span class="day"><%= blog.created_at.strftime('%d') %></span>
+  							<span class="month"><%= blog.created_at.strftime('%h %Y') %></span>
+  						</span>
+  					</div>
+  				</header>
+  				<div class="blogpost-content">
+  					<p><%= blog.content %></p>
+  				</div>
+  			</div>
+  		</div>
+  		<footer class="clearfix"></footer>
+  	</article>
+  <% end %>
+</div>

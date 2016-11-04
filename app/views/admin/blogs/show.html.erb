@@ -10,6 +10,6 @@
   </div>
   <div class="box-footer">
     <%= link_to '編集', edit_admin_blog_path(@blog), class: "btn btn-success" %>
-    <%= link_to '削除', admin_blog_path(@blog), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to '削除', admin_blog_path(@blog), class: "btn btn-danger", method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
   </div>
 </div>
