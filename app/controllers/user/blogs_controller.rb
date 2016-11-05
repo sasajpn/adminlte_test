@@ -2,7 +2,7 @@ class User::BlogsController < UserController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = User::Blog.order(:id).page(params[:page])
+    @blogs = User::Blog.order("created_at desc").page(params[:page])
   end
 
   def show
