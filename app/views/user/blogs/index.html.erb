@@ -10,14 +10,14 @@
           </div>
           <div class="col-md-6">
             <header>
-            <h2><%= link_to user_blog_path(blog) do %><%= blog.title %><% end %></h2>
-            <div class="post-info">
-            <span class="post-date">
-            <i class="icon-calendar"></i>
-            <span class="day"><%= blog.created_at.strftime('%d') %></span>
-            <span class="month"><%= blog.created_at.strftime('%h %Y') %></span>
-            </span>
-            </div>
+              <h2><%= link_to user_blog_path(blog) do %><%= blog.title %><% end %></h2>
+              <div class="post-info">
+                <span class="post-date">
+                  <i class="icon-calendar"></i>
+                  <span class="day"><%= blog.created_at.strftime('%d') %></span>
+                  <span class="month"><%= blog.created_at.strftime('%h %Y') %></span>
+                </span>
+              </div>
             </header>
             <div class="blogpost-content">
               <p><%= blog.content %></p>

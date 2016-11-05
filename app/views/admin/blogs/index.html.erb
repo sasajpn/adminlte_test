@@ -7,15 +7,15 @@
     <div class="box-body">
       <ul class="products-list product-list-in-box">
         <% @blogs.each do |blog| %>
-        <li class="item">
-          <div class="product-info">
-            <%= link_to admin_blog_path(blog), class: "product-title" do %><%= blog.title %><% end %>
-            <span class="label label-warning pull-right">作成日：<%= blog.created_at.strftime('%Y年%m月%d日') %></span>
-            <span class="product-description">
-              <%= truncate(blog.content, length: 100) %>
-            </span>
-          </div>
-        </li>
+          <li class="item">
+            <div class="product-info">
+              <%= link_to admin_blog_path(blog), class: "product-title" do %><%= blog.title %><% end %>
+              <span class="label label-warning pull-right">作成日：<%= blog.created_at.strftime('%Y年%m月%d日') %></span>
+              <span class="product-description">
+                <%= truncate(blog.content, length: 100) %>
+              </span>
+            </div>
+          </li>
         <% end %>
       </ul>
     </div>
