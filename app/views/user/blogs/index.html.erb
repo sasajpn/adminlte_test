@@ -3,12 +3,12 @@
   <div class="separator-2"></div>
   <% if @blogs.any? %>
     <% @blogs.each do |blog| %>
-    	<article class="blogpost">
-    		<div class="row grid-space-10">
-    			<div class="col-md-6">
+      <article class="blogpost">
+        <div class="row grid-space-10">
+          <div class="col-md-6">
             <%= image_tag('blog.jpg') %>
-    			</div>
-    			<div class="col-md-6">
+          </div>
+          <div class="col-md-6">
     				<header>
     					<h2><%= link_to user_blog_path(blog) do %><%= blog.title %><% end %></h2>
     					<div class="post-info">
