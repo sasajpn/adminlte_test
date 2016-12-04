@@ -3,6 +3,7 @@
     管理者ログイン画面
   </div>
   <div class="login-box-body">
+    <%= flash[:alert] %>
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.email_field :email %>
       <%= f.password_field :password, autocomplete: "off" %>

@@ -1,5 +1,6 @@
 .contact-form
-  = bootstrap_form_for(@blog, id: "contact-form-with-recaptcha", class: "margin-clear") do |f|
+  = bootstrap_form_for(@blog, inline_errors: false, id: "contact-form-with-recaptcha", class: "margin-clear") do |f|
+    = f.alert_message "エラーがあります。"
     .form-group.has-feedback
       = f.text_field :title
     .form-group.has-feedback
