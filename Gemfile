@@ -20,6 +20,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap_form'
 
+# Auhtenticate
+gem 'devise'
+
 # Pagination
 gem 'kaminari'
 
