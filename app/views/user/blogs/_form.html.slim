@@ -1,0 +1,7 @@
+.contact-form
+  = bootstrap_form_for(@blog, id: "contact-form-with-recaptcha", class: "margin-clear") do |f|
+    .form-group.has-feedback
+      = f.text_field :title
+    .form-group.has-feedback
+      = f.text_area :content
+    = f.submit

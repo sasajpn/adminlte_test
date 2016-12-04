@@ -1,0 +1,30 @@
+.main.col-md-8.col-lg-offset-1.col-md-push-4.col-lg-push-3
+  h1.page-title
+    | Blog一覧
+  .separator-2
+  - if @blogs.any?
+    - @blogs.each do |blog|
+      article.blogpost
+        .row.grid-space-10
+          .col-md-6
+            = image_tag('blog.jpg')
+          .col-md-6
+            header
+              h2
+                = link_to user_blog_path(blog) do
+                  = blog.title
+              .post-info
+                span.post-date
+                  i.icon-calendar
+                  span.day
+                    = blog.created_at.strftime('%d')
+                  span.month
+                    = blog.created_at.strftime('%h %Y')
+            .blogpost-content
+              p
+                = blog.content
+        footer.clearfix
+    = paginate @blogs, theme: "user"
+  - else
+    h2
+      | 投稿されているブログがありません。

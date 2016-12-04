@@ -1,0 +1,15 @@
+aside.main-sidebar
+  section.sidebar
+    ul.sidebar-menu
+      li.header
+        | Menu
+      li
+        = link_to admin_blogs_path do
+          i.fa.fa-link
+          span
+            | Blog一覧
+      li
+        = link_to new_admin_blog_path do
+          i.fa.fa-link
+          span
+            | Blog作成

@@ -12,7 +12,8 @@
 !/log/.keep
 /tmp
 
-# dotenv
+config/database.yml
+
 .env
 
 config/settings.local.yml

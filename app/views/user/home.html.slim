@@ -1,0 +1,29 @@
+section.light-gray-bg.pv-30.clearfix
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        h2.text-center
+          | infra 
+          strong
+            | 課題1
+        .separator
+      .col-md-4.col-md-offset-2
+        .pv-30.ph-20.feature-box.bordered.shadow.text-center.object-non-visible.animated.object-visible.fadeInDownSmall[data-animation-effect="fadeInDownSmall" data-effect-delay="100"]
+          span.icon.default-bg.circle
+            i.fa.fa-user
+          h3
+            | Admin
+          .separator.clearfix
+          = link_to admin_blogs_path, class: "btn btn-default btn-lg btn-animated" do
+            | Admin Blog 
+            i.fa.fa-arrow-right
+      .col-md-4
+        .pv-30.ph-20.feature-box.bordered.shadow.text-center.object-non-visible.animated.object-visible.fadeInDownSmall[data-animation-effect="fadeInDownSmall" data-effect-delay="200"]
+          span.icon.default-bg.circle
+            i.fa.fa-user
+          h3
+            | User
+          .separator.clearfix
+          = link_to user_blogs_path, class: "btn btn-default btn-lg btn-animated" do
+            | User Blog 
+            i.fa.fa-arrow-right

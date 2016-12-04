@@ -1,7 +1,8 @@
-server '150.95.131.121',
-user: 'sasahara',
-roles: %w{app db web}
+role :app, %w{ sasahara@www.sasa97.biz }
+role :web, %w{ sasahara@www.sasa97.biz }
+role :db,  %w{ sasahara@www.sasa97.biz }
+
 set :ssh_options, {
-port: '9724',
-keys: File.expand_path('~/.ssh/id_rsa'),
+  port: '9724',
+  keys: File.expand_path('~/.ssh/id_rsa'),
 }

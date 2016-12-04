@@ -1,0 +1,12 @@
+section.content-header
+  h1
+    | Blog詳細
+.box
+  .box-header.with-border
+    h3.box-title
+      = @blog.title
+  .box-body
+    = @blog.content
+  .box-footer
+    = link_to '編集', edit_admin_blog_path(@blog), class: "btn btn-success"
+    = link_to '削除', admin_blog_path(@blog), class: "btn btn-danger", method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }

@@ -12,6 +12,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
+gem 'slim-rails'
+gem 'html2slim'
+
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
@@ -42,7 +45,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano', '~> 3.6.0'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
