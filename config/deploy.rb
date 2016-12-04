@@ -7,7 +7,7 @@ set :branch, ENV['BRANCH'] || 'master'
 
 set :deploy_to, '/var/www/adminlte_test'
 
-set :linked_files, %w{.env config/secrets.yml}
+set :linked_files, %w{.env config/secrets.yml config/database.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 
 set :keep_releases, 5
