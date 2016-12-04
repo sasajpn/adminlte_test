@@ -48,7 +48,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'capistrano', '~> 3.6.0'
+  gem 'capistrano', '3.6.1'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'

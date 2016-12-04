@@ -1,7 +1,7 @@
 lock '3.6.1'
 
 set :application, 'adminlte_test'
-set :repo_url, 'https://github.com/sasajpn/adminlte_test.git'
+set :repo_url, 'git@github.com:sasajpn/adminlte_test.git'
 
 set :branch, ENV['BRANCH'] || 'master'
 
@@ -20,7 +20,9 @@ set :log_level, :debug
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    invoke 'unicorn:restart'
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'unicorn:restart'
+    end
   end
 
   after :restart, :clear_cache do
