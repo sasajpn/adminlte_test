@@ -2,7 +2,7 @@ class Admin::BlogsController < AdminController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.order("created_at desc").page(params[:page])
+    @blogs = Blog.order(created_at: :desc).page(params[:page])
   end
 
   def show
