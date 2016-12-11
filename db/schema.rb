@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211202533) do
-
-  create_table "admin_blogs", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
+ActiveRecord::Schema.define(version: 20161211204000) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",              limit: 255, default: "", null: false
@@ -34,12 +27,15 @@ ActiveRecord::Schema.define(version: 20161211202533) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
 
-  create_table "user_blogs", force: :cascade do |t|
+  create_table "blogs", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
+    t.integer  "user_id",    limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
+  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -47,4 +43,5 @@ ActiveRecord::Schema.define(version: 20161211202533) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "blogs", "users"
 end
