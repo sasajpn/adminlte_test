@@ -1,4 +1,4 @@
-class BlogsController < UserController
+class Mypage::BlogsController < MypageController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -18,7 +18,7 @@ class BlogsController < UserController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to user_blog_url(@blog)
+      redirect_to mypage_blog_url(@blog)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class BlogsController < UserController
 
   def update
     if @blog.update(blog_params)
-      redirect_to user_blog_url(@blog)
+      redirect_to mypage_blog_url(@blog)
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class BlogsController < UserController
 
   def destroy
     @blog.destroy
-      redirect_to user_blogs_url
+      redirect_to mypage_blogs_url
   end
 
   private

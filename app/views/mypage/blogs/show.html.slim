@@ -17,8 +17,8 @@
       .link.pull-right
         ul.blog-option.small.margin-clear.text-right
           li
-            = link_to edit_user_blog_path(@blog) do
+            = link_to edit_mypage_blog_path(@blog) do
               i.fa.fa-edit
           li
-            = link_to user_blog_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } do
+            = link_to mypage_blog_path(@blog), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } do
               i.fa.fa-trash-o

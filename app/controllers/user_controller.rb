@@ -1,5 +1,5 @@
 class UserController < ActionController::Base
-  layout 'user/application'
+  layout 'mypage/application'
 
   def home
   end
