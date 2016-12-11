@@ -1,7 +1,7 @@
 .box.box-primary
   .box-body
     .form-group
-      = bootstrap_form_for(@blog) do |f|
+      = bootstrap_form_for [:admin, @blog] do |f|
         = f.alert_message "エラーがあります。"
         = f.text_field :title
         = f.text_area :content
