@@ -1,22 +1,22 @@
-class User::BlogsController < UserController
+class BlogsController < UserController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = User::Blog.order(created_at: :desc).page(params[:page])
+    @blogs = Blog.order(created_at: :desc).page(params[:page])
   end
 
   def show
   end
 
   def new
-    @blog = User::Blog.new
+    @blog = Blog.new
   end
 
   def edit
   end
 
   def create
-    @blog = User::Blog.new(blog_params)
+    @blog = Blog.new(blog_params)
     if @blog.save
       redirect_to user_blog_url(@blog)
     else
@@ -40,7 +40,7 @@ class User::BlogsController < UserController
   private
 
   def set_blog
-    @blog = User::Blog.find(params[:id])
+    @blog = Blog.find(params[:id])
   end
 
   def blog_params

@@ -3,8 +3,8 @@ html
   head
     title
       | AdminInfra
-    = stylesheet_link_tag    'user/application', media: 'all'
-    = javascript_include_tag 'user/application'
+    = stylesheet_link_tag    'mypage/application', media: 'all'
+    = javascript_include_tag 'mypage/application'
     = csrf_meta_tags
     link[href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css"]
     link[href="//fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css"]
@@ -13,10 +13,10 @@ html
     link[href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"]
     link[href="https://cdn.jsdelivr.net/entypo-fontello/0.1/entypo.css" rel="stylesheet" type="text/css"]
   body
-    = render partial: 'user/shared/header'
+    = render partial: 'mypage/shared/header'
     section.main-container
       .container
         .row
           = yield
-          = render partial: 'user/shared/sidebar'
-    = render partial: 'user/shared/footer'
+          = render partial: 'mypage/shared/sidebar'
+    = render partial: 'mypage/shared/footer'
