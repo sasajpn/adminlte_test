@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :admin_users
+  resources :blogs, only: [:index, :show]
 
-  root 'user#home'
+  namespace :mypage do
+    resources :blogs
+  end
 
   namespace :admin do
     resources :blogs
   end
 
-  namespace :user do
-    resources :blogs
-  end
+  devise_for :admin_users, path: 'admin',
+    controllers: { sessions: 'admin/sessions' }, only: :session
 end
