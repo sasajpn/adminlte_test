@@ -1,14 +1,15 @@
-application = '/var/www/adminlte_test'
+current_path = '/var/www/adminlte_test/current'
+shared_path = '/var/www/adminlte_test/shared'
 
 worker_processes 2
-working_directory "#{application}/current"
+working_directory "#{current_path}"
 
-listen "#{application}/shared/tmp/sockets/unicorn.sock"
+listen "#{shared_path}/tmp/sockets/unicorn.sock"
 timeout 30
-pid "#{application}/shared/tmp/pids/unicorn.pid"
+pid "#{shared_path}/tmp/pids/unicorn.pid"
 
-stderr_path "#{application}/shared/log/unicorn.stderr.log"
-stdout_path "#{application}/shared/log/unicorn.stdout.log"
+stderr_path "#{shared_path}/log/unicorn.stderr.log"
+stdout_path "#{shared_path}/log/unicorn.stdout.log"
 
 preload_app true
 

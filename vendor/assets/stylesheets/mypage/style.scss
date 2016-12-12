@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100% !important;
+}
+
+.logo h3 {
+  margin-top: 10px;
+}
+h3 a:hover {
+  text-decoration: none;
+}
+
+.pagination .page-option a:hover {
+  cursor: default;
+  background-color: #777777;
+}
+
+.blog-option {
+  list-style: none;
+  font-size: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.blog-option li {
+  display: inline-block;
+  margin: 0 2px 2px 0;
+}
+
+.blog-option li a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #0c9ec7;
+  color: #0c9ec7;
+}
+
+.blog-option li a i {
+  line-height: 40px;
+}

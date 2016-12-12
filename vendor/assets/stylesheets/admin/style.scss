@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100% !important;
+}
+
+.content-wrapper {
+  min-height: 1050px !important;
+  height: 100%;
+}
+
+.box {
+  width: 90% !important;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.pagination {
+  margin-left: 56px !important;
+}
