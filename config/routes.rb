@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'mypage/blogs#index'
   resources :blogs, only: [:index, :show]
 
   namespace :mypage do
