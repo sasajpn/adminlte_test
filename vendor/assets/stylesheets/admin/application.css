@@ -1,4 +1,6 @@
 /*
 *= require_tree .
+*= require admin/bootstrap
+*= rquire admin/style
 *= require_self
 */
